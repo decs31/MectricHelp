@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MVIC Release Notes :: Mectric MSE Help</title>
+    <link>http://localhost:1313/mvic/MvicReleaseNotes/index.html</link>
+    <description>MVIC 1.2.0 21/06/2025&#xA;New Features&#xA;Added torque modelling - Generates engine torque from fuel mass, injector pulse width, or injector duty cycle. Added shifter switches and gear lever position to Nissan M35 Integration. MVIC v1.1.4 14/02/2025&#xA;New Features&#xA;Added user definable CAN frame checksums. Bug Fixes&#xA;Emtron Rx Preset - Fixed Engine Protection data.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/mvic/MvicReleaseNotes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

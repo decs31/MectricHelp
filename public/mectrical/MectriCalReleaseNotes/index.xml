@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MectriCal Release Notes :: Mectric MSE Help</title>
+    <link>http://localhost:1313/mectrical/MectriCalReleaseNotes/index.html</link>
+    <description>MectriCal 0.18 21/06/2025&#xA;Device Firmware&#xA;MVIC v.1.2.0 - NEW! uPDM4 v.2.0.5 MectriCal 0.17 04/06/2025&#xA;New Features&#xA;Added Release Notes link button to firmware update utility. Bug Fixes&#xA;Logs not auto-saving when no save directory is set - fixed. Second uPDM4 not opening properly when more than one unit on the same CAN bus - fixed. Device Firmware&#xA;MVIC v.1.1.4 uPDM4 v.2.0.5 - NEW! MectriCal 0.16 14/02/2025&#xA;New Features&#xA;Added support for MVIC CAN Checksums. Device Firmware</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/mectrical/MectriCalReleaseNotes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

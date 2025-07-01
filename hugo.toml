@@ -1,0 +1,47 @@
+baseURL = 'https://help.mectricmse.com/'
+languageCode = 'en-us'
+title = 'Mectric MSE Help'
+theme = 'hugo-theme-relearn'
+disablePathToLower = true
+pluralizeListTitles = false
+
+[params]
+  menu_style = "slide-menu"
+  editURL = ""
+  disableRootBreadcrumb = true
+  disableInlineCopyToClipBoard = true
+  disableLandingPageButton = false
+
+[[params.themeVariant]]
+  identifier = 'relearn-dark'
+
+[caches]
+[caches.images]
+  dir = ':cacheDir/images'
+
+# This is so that the image path works when previewing markdown and in the final build
+[[module.mounts]]
+  source = 'static'
+  target = 'static'
+
+[[module.mounts]]
+  source = 'assets'
+  target = 'static/assets'
+
+[outputs]
+  home = [
+    'html',
+  ]
+  page = [
+    'html',
+    'rss',
+    'print',
+  ]
+  section = [
+    'html',
+  ]
+
+[languages]
+  [languages.en]
+    [languages.en.params]
+      landingPageName = '<i class="fa-fw fas fa-home"></i> Home'
