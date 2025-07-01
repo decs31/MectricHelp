@@ -3,8 +3,6 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
----
-
 ## MectriCal 0.18
 *21/06/2025*
 
@@ -48,5 +46,3 @@ weight: 1
 **Device Firmware**
  - [uPDM4 v.2.0.4 - NEW!](../updm4/Updm4ReleaseNotes/#updm4-v204)
  - [MVIC v.1.0.2 - NEW!](../mvic/MvicReleaseNotes)
-
- ---
