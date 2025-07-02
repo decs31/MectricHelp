@@ -6,3 +6,7 @@ params:
 ---
 
 ![MVIC](/assets/mvic_1_tsp.png)
+
+Documentation for the Mectric Vehicle Integration Controller (MVIC).
+
+{{% children sort="auto" depth=2 %}}

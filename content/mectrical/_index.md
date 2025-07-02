@@ -6,3 +6,7 @@ params:
 ---
 
 ![MectriCal](/assets/mectrical_table.png)
+
+Documentation for MectriCal tuning software.
+
+{{% children sort="auto" depth=2 %}}
