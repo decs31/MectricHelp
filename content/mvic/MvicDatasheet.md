@@ -5,6 +5,8 @@ params:
     menuPre: '<i class="fa-regular fa-file-lines"></i> '
 ---
 
+![MVIC](/assets/mvic/mvic_1_tsp.png)
+
 The Mectric Vehicle Integration Controller (MVIC) is a fully featured, user definable, programmable CAN translation unit. It's 2x CAN 2.0B/FD interfaces can be configured to send and receive a virtually limitless combination of data. Powerful firmware and an intuitive user interface allows the generation of thousands of predefined and custom channels.
 
 ## Applications

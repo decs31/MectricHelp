@@ -5,6 +5,8 @@ params:
     menuPre: '<i class="fa-regular fa-file-lines"></i> '
 ---
 
+![uPDM4](/assets/updm4/updm4_tsp.png)
+
 The Micro PDM4 is a smart 4 channel power distribution module designed to replace mechanical relays and fuses in aftermarket automotive electrical circuits. Each of the 4 outputs can supply up to 15 amps continuous load current. Each output can be triggered by switch inputs or CAN messages. Outputs feature PWM soft start capabilities.
 
 In applications where installers may need to add a small number of power circuits but don't require the size, cost or complexity of a full scale PDM. The Micro PDM4 is perfect for coupling with new engine harness builds or when adding a wide range of auxiliary circuits to a vehicle.
