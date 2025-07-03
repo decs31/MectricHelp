@@ -148,3 +148,75 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 
 ---
 
+## Features
+
+### Power Supply
+ - Reverse polarity protection
+ - Over temperature protection
+ - Over current protection
+ - Current & voltage diagnostic monitoring
+ - 1x Battery constant supply
+ - 2x Auxiliary output driver supplies
+ - 2x Solenoid supplies
+ - 1x Ignition switch input
+
+### Processor
+ - Duel 650 MHz, 32bit Automotive Processors
+ - 512MB DDR3 RAM
+ - Tightly coupled FPGA
+
+### Analog Inputs
+> 16x Analog Inputs
+ - 0-5V
+ - 12 bit, 1.22mV resolution
+ - Switchable 1K pullups to 5V Out 1 on pins 1-8
+ - Switchable 1K pullups to 5V Out 2 on pins 9-16
+ - ~10K samples per second
+ - 100K Ohms to ground
+ - 24V tollerant
+
+### Digital Inputs
+> 16x Digital Inputs
+ - 0.5 – 20KHz
+ - 0-39V Analog Input on all pins
+ - 12 bit, 9.52mV resolution
+ - Hall effect & Reluctor sensor compatible
+ - Switchable 4K7 pullups to 8.0V on all pins
+ - Digital Input 1-8:
+ - Programmable 0-5V low trigger thresholds
+ - Programmable 0-5V high trigger thresholds
+ -  Digital Input 9-16:
+ -  Fixed low trigger threshold: 0.42V
+ -  Fixed high trigger threshold: 2.40V
+
+
+### Auxiliary Outputs
+> 8x Auxiliary Outputs 
+ - Half-Bridge Drivers
+ - 0.1 – 20 KHz PWM
+ - High Side / Low Side 35A peak, 15A continuous
+ - Bi-directional current monitoring on all pins
+
+### Solenoid Outputs
+> 16x Proportional Current Solenoid Drivers
+ - 0.1 – 20 KHz PWM
+ - Low side only
+ - 1.8A continuous
+ - Current monitoring and control on all pins
+ - Flywheel diodes connected to solenoid power supply outputs (see below)
+ - Unused solenoid outputs can be used as low side auxiliary outputs
+
+
+### Solenoid Power Supply Outputs x4
+> 4x Protected Solenoid Supply Outputs
+ - Protected and monitored solenoid supply pins
+ - Over current protected
+ - Current & voltage diagnostic monitoring
+
+### Analog Outputs
+> 4x Analog Outputs
+
+---
+
+## Programming
+All device configuration and firmware updates are done via ethernet connection with our free MectriCal PC Software.
