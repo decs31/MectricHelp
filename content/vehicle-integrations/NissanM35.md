@@ -2,7 +2,7 @@
 title: "Nissan Stagea M35"
 ---
 
-![MVIC](/assets/m35_integration.png)
+![MVIC](/assets/m35/m35_integration.png)
 
 This integration package unlocks the Nissan Stagea M35 vehicle integration preset mode in MVIC Firmware. This enables almost any CAN capable aftermarket Engine Management system to be used in the vehicle, while maintaining all OEM functionality.
 
@@ -49,25 +49,25 @@ This integration package is intended for use with Mectric Motorsport Electronics
 ``Minimum MVIC Firmware Version: 1.0.2.9097 – 27/11/24``
 
 1. Enable the Nissan Stagea M35 Integration Mode:
-![M35 Installation](/assets/m35_stagea_1.png)
+![M35 Installation](/assets/m35/m35_stagea_1.png)
 
 2. Enter the Activation Key provided when you purchased the Vehicle Integration:
-![M35 Installation](/assets/m35_stagea_2.png)
+![M35 Installation](/assets/m35/m35_stagea_2.png)
 ``This key is unique for every device serial number.``
 
 3. Set a CAN Channel to “Nissan Stagea M35 Vehicle Rx”:
-![M35 Installation](/assets/m35_stagea_3.png)
+![M35 Installation](/assets/m35/m35_stagea_3.png)
     *It does not matter which channel is used, as long as it belongs to the CAN Node connected to the vehicle’s OEM Bus.*
 
 4. Set a second CAN Channel to “Nissan Stagea M35 Engine Tx”:
-![M35 Installation](/assets/m35_stagea_4.png)
+![M35 Installation](/assets/m35/m35_stagea_4.png)
     *Again, it doesn’t matter channel is used, as long as it belongs to the CAN Node connected to the vehicle’s OEM Bus.*
 
 5. Verify that the chosen CAN Channel Counter runtimes indicate the sending and receiving of data.
-![M35 Installation](/assets/m35_stagea_5.png)
+![M35 Installation](/assets/m35/m35_stagea_5.png)
 
 6. Proceed to configure all required communications to your Engine Management System and setup any other required channels, depending on your application. For example:
-![M35 Installation](/assets/m35_stagea_6.png)
+![M35 Installation](/assets/m35/m35_stagea_6.png)
 
 Communications with aftermarket systems can be on a separate CAN Bus network to the OEM bus. It can be beneficial to keep them separate as it allows the two buses to run at different bit rates and keeps the OEM bus’s bandwidth from being compromised.
 
@@ -366,7 +366,7 @@ The torque values given to the transmission will greatly affect the way the car 
  - `TCM Torque Reduction Request`: When this channel is greater than 0, the ECU is required to reduce torque by at least this amount. 
  - `Transmission Low Torque Flag`: Whenever this flag is set, the ECU should limit engine torque significantly. This should ideally be done by limiting throttle opening to a “Limp Home” level.
 
-![M35 Torque Management](/assets/m35_stagea_7.png)
+![M35 Torque Management](/assets/m35/m35_stagea_7.png)
     *Note the channel name for the reduction request has since changed to “TCM Torque Reduction Request”.*
 
 You can see that under normal conditions, uncorrected (yellow) and actual (green) engine torque should follow each other closely. In fact, it’s ok for these values to be identical. 

@@ -1,8 +1,8 @@
 ---
 title: "uPDM4"
-weight: 6
+weight: 4
 params:
-  menuPre: '<i class="fa-solid fa-microchip"></i> '
+  menuPre: '<i class="fa-solid fa-bolt-lightning"></i> '
 ---
 
 ![MVIC](/assets/updm4_tsp.png)

@@ -5,7 +5,7 @@ params:
     menuPre: '<i class="fa-solid fa-laptop"></i> '
 ---
 
-![MectriCal](/assets/mectrical_table.png)
+![MectriCal](/assets/mectrical/mectrical_table.png)
 
 Documentation for MectriCal tuning software.
 

@@ -1,5 +1,6 @@
 ---
 title: "MVIC Datasheet"
+weight: 2
 params:
     menuPre: '<i class="fa-regular fa-file-lines"></i> '
 ---
@@ -16,8 +17,9 @@ The Mectric Vehicle Integration Controller (MVIC) is a fully featured, user defi
 ---
 
 ## Wiring Pinout
-![MVIC Connector Pinout](/assets/mvic_pinout.png)
-> Mating Connector: Deutsch DT06-6S
+![MVIC Connector Pinout](/assets/mvic/mvic_pinout.png)
+
+{{% badge style="info" %}}**Mating Connector**: Deutsch DT06-6S{{% /badge %}}
 
 | Pin | Function    |
 |-----|-------------|
@@ -79,7 +81,7 @@ All device configuration and firmware updates are done via USB-C connection with
 | Connector	                    | 6 Pin Deutsch DT Series       |
 | Nominal Supply Voltage Range  | 9 - 22 V                      |
 | Minimum operating voltage	    | 6 V                           |
-| Maximum operating voltage	    | 35 V 1                        |
+| Maximum operating voltage	    | 35 V                       |
 | Supply Current                | 15 mA                         |
 | Size                          | 84mm L, 53mm W, 32mm H        |
 | Weight                        | 130g                          |

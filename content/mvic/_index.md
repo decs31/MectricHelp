@@ -1,11 +1,11 @@
 ---
 title: "MVIC"
-weight: 5
+weight: 3
 params:
-  menuPre: '<i class="fa-solid fa-microchip"></i> '
+  menuPre: '<i class="fa-solid fa-network-wired"></i> '
 ---
 
-![MVIC](/assets/mvic_1_tsp.png)
+![MVIC](/assets/mvic/mvic_1_tsp.png)
 
 Documentation for the Mectric Vehicle Integration Controller (MVIC).
 
