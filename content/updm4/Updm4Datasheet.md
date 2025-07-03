@@ -318,7 +318,7 @@ These frames allow the reading & writing of internal configuration data. They ar
 | Data 4 | 5 | \*\* | \*\* | \*\* | \*\* | \*\* | \*\* |  |
 | Checksum (where applicable) | 6 | 16 (LSB First) | No | 1 | 0 | None | 0 | *Sum (Bytes 0:5) + 1* |
 
-`The device will respond via Tx Frame 13.`
+> The device will respond via Tx Frame 13.
 
 ### Tx Frame 13: Special Command Response 
 **Base ID Offset:** 13 (0x0D) | **DLC:** 8 | **Rate:** Once
