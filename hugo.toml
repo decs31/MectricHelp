@@ -11,6 +11,7 @@ pluralizeListTitles = false
   disableRootBreadcrumb = true
   disableInlineCopyToClipBoard = true
   disableLandingPageButton = false
+  collapsibleMenu=true
 
 [[params.themeVariant]]
   identifier = 'relearn-dark'
