@@ -103,7 +103,7 @@ This functionality has been chosen because some ECU’s which may be driving the
 The μPDM4 is equipped with a single high speed Controller Area Network (CAN) transceiver able to communicate CAN2.0A/B & CAN Flexible Data rate (FD) messages at up to 4 Mbit/s. By default, the device accepts standard 11 bit frames at up to 1 Mbit/s (FD disabled).
 
 ## Bus Wiring & Termination
-``The μPDM4 is **NOT** fitted with a CAN termination resistor.`` 
+{{% badge style="info" %}}The μPDM4 is **NOT** fitted with a CAN termination resistor.{{% /badge %}}
 
 If the device is at either end of the bus, an external 120R termination resister should be installed.
 
