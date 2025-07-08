@@ -7,8 +7,8 @@ weight: 1
 *21/06/2025*
 
 **Device Firmware**
- - [MVIC v.1.2.0 - NEW!](../mvic/MvicReleaseNotes/#mvic-120)
- - [uPDM4 v.2.0.5](../updm4/Updm4ReleaseNotes/#updm4-v205)
+ - [MVIC v.1.2.0](../mvic/mvic-release-notes.md/#mvic-120) `NEW!`
+ - [uPDM4 v.2.0.5](../updm4/updm4-release-notes.md/#updm4-v205)
 
 ---
 
@@ -23,8 +23,8 @@ weight: 1
  - Second uPDM4 not opening properly when more than one unit on the same CAN bus - fixed.
 
  **Device Firmware**
- - [MVIC v.1.1.4](../mvic/MvicReleaseNotes/#mvic-v114)
- - [uPDM4 v.2.0.5 - NEW!](../updm4/Updm4ReleaseNotes/#updm4-v205)
+ - [MVIC v.1.1.4](../mvic/mvic-release-notes.md/#mvic-v114)
+ - [uPDM4 v.2.0.5](../updm4/updm4-release-notes.md/#updm4-v205) `NEW!`
 
  ---
 
@@ -35,8 +35,8 @@ weight: 1
  - Added support for MVIC CAN Checksums.
 
 **Device Firmware**
- - [MVIC v.1.1.4 - NEW!](../mvic/MvicReleaseNotes/#mvic-v114)
- - [uPDM4 v.2.0.4](../updm4/Updm4ReleaseNotes/#updm4-v204)
+ - [MVIC v.1.1.4](../mvic/mvic-release-notes.md/#mvic-v114) `NEW!`
+ - [uPDM4 v.2.0.4](../updm4/updm4-release-notes.md/#updm4-v204)
  
  ---
 
@@ -44,5 +44,6 @@ weight: 1
 *19/12/2024*
 
 **Device Firmware**
- - [uPDM4 v.2.0.4 - NEW!](../updm4/Updm4ReleaseNotes/#updm4-v204)
- - [MVIC v.1.0.2 - NEW!](../mvic/MvicReleaseNotes)
+ - [MVIC v.1.0.2](../mvic/mvic-release-notes.md) `NEW!`
+ - [uPDM4 v.2.0.4](../updm4/updm4-release-notes.md/#updm4-v204) `NEW!`
+
