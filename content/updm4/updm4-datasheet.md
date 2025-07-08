@@ -15,11 +15,10 @@ The uPDM4 is constructed from AEC-Q100 Automotive Grade components, ensuring its
 
 ## Overview
  - 4x Outputs, 15A Nominal, 24A Max
- - 4x Digital Inputs
- - 1x Analogue/Digital Input
+ - 5x Analogue/Digital Inputs
  - CAN 2.0B / FD Communications
- - Overcurrent Protection
- - Overtemperature Protection
+ - Over current Protection
+ - Over temperature Protection
  - Short Circuit Protection
  - Automotive Grade Device
 

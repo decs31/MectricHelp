@@ -2,7 +2,7 @@ baseURL = 'https://help.mectricmse.com/'
 languageCode = 'en-us'
 title = 'Mectric MSE Help'
 theme = 'hugo-theme-relearn'
-disablePathToLower = true
+disablePathToLower = false
 pluralizeListTitles = false
 
 [params]
