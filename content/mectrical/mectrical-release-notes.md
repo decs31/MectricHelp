@@ -3,7 +3,7 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
-## MectriCal 0.18
+## MectriCal v0.18
 *21/06/2025*
 
 **Device Firmware**
@@ -12,7 +12,7 @@ weight: 1
 
 ---
 
-## MectriCal 0.17
+## MectriCal v0.17
 *04/06/2025*
 
 **New Features**
@@ -28,7 +28,7 @@ weight: 1
 
  ---
 
-## MectriCal 0.16
+## MectriCal v0.16
 *14/02/2025*
 
 **New Features**
@@ -40,7 +40,7 @@ weight: 1
  
  ---
 
- ## MectriCal 0.13
+ ## MectriCal v0.13
 *19/12/2024*
 
 **Device Firmware**

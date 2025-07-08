@@ -3,7 +3,7 @@ title: "uPDM4 Release Notes"
 weight: 1
 ---
 
-## uPDM4 2.0.5
+## uPDM4 v2.0.5
 *02/06/2025*
 
 **Bug Fixes**
@@ -12,7 +12,7 @@ weight: 1
 
 ---
 
-## uPDM4 2.0.4
+## uPDM4 v2.0.4
 *19/12/2024*
 
 **Bug Fixes**

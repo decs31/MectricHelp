@@ -3,7 +3,7 @@ title: "MVIC Release Notes"
 weight: 1
 ---
 
-## MVIC 1.2.0
+## MVIC v1.2.0
 *21/06/2025*
 
 **New Features**
