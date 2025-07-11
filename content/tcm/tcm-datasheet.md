@@ -1,5 +1,5 @@
 ---
-title: "Praetor TCM Datasheet"
+title: "Praetor TC24 Datasheet"
 weight: 2
 ---
 
@@ -26,7 +26,9 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
  - Ethernet PC Tuning
 
 ## Applications
- - DSG/DCT Transmissions
+ - Dual Clutch Transmissions
+ - Multiclutch Automatic Transmissions
+ - Traditional Automatic Transmissions
 
 ---
 
@@ -35,10 +37,10 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 > Looking into TCM
 
 ### Connector A
-{{% badge style="info" %}}**Mating Connector**: TE 4-1437290-0{{% /badge %}}
+{{% badge style="info" %}}**Mating Connector**: 4-1437290-0{{% /badge %}}
 
 | Pin     | Function    |
-|---------|-------------|
+| ------- | ----------- |
 | A1	  | ANV 1  |
 | A2	  | ANV 2  |
 | A3	  | ANV 3  |
@@ -75,10 +77,10 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 | A34	  | Sensor GND |
 
 ### Connector B
-{{% badge style="info" %}}**Mating Connector**: TE 4-1437290-1{{% /badge %}}
+{{% badge style="info" %}}**Mating Connector**: 4-1437290-1{{% /badge %}}
 
 | Pin     | Function    |
-|---------|-------------|
+| ------- | ----------- |
 | B1	  | Aux 1  |
 | B2	  | Aux 2  |
 | B3	  | Aux 3  |
@@ -115,10 +117,10 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 | B34	  | GND |
 
 ### Connector C
-{{% badge style="info" %}}**Mating Connector**: TE 3-1437290-7{{% /badge %}}
+{{% badge style="info" %}}**Mating Connector**: 3-1437290-7{{% /badge %}}
 
 | Pin     | Function    |
-|---------|-------------|
+| ------- | ----------- |
 | C1	  | Battery Hot Supply  |
 | C2	  | Aux 1-4 Supply  |
 | C3	  | Aux 5-8 Supply  |
@@ -182,12 +184,14 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
  - 12 bit, 9.52mV resolution
  - Hall effect & Reluctor sensor compatible
  - Switchable 4K7 pullups to 8.0V on all pins
- - Digital Input 1-8:
- - Programmable 0-5V low trigger thresholds
- - Programmable 0-5V high trigger thresholds
- -  Digital Input 9-16:
- -  Fixed low trigger threshold: 0.42V
- -  Fixed high trigger threshold: 2.40V
+
+**Digital Input 1-8:**
+ - Programmable 0-5V low trigger threshold
+ - Programmable 0-5V high trigger threshold
+
+**Digital Input 9-16:**
+ - Fixed low trigger threshold: 0.42V
+ - Fixed high trigger threshold: 2.40V
 
 
 ### Auxiliary Outputs
@@ -206,7 +210,6 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
  - Flywheel diodes connected to solenoid power supply outputs (see below)
  - Unused solenoid outputs can be used as low side auxiliary outputs
 
-
 ### Solenoid Power Supply Outputs x4
 > 4x Protected Solenoid Supply Outputs
  - Protected and monitored solenoid supply pins
@@ -215,8 +218,24 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 
 ### Analog Outputs
 > 4x Analog Outputs
+ - 0-5V, 10 bit, 4.88 mV resolution
+ - 11 mA per channel
 
----
+### Inertial Measurement Unit
+ - 3 Axis Accelerometer, ±2/4/8/16 g
+ - 3 Axis Gyroscope, ±125 - ±4000 dps
 
-## Programming
+### On board Sensors
+ - Barometric Pressure Sensor
+ - PCB Temperature Sensor
+
+### Communications
+ - 10/100 Ethernet PC tuning interface, high speed, high noise immunity
+ - 2x CAN 2.0A/B Interfaces, fully user configurable
+ - 1x RS232 Serial Interface
+
+### Data Logging
+ - 8GB Onboard eMMC logging memory.
+
+### Programming
 All device configuration and firmware updates are done via ethernet connection with our free MectriCal PC Software.

@@ -1,6 +1,6 @@
 ---
 title: "Praetor TCM"
-draft: true
+draft: false
 weight: 2
 params:
   menuPre: '<i class="fa-solid fa-gears"></i> '
