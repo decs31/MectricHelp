@@ -27,7 +27,7 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 
 ## Applications
  - Dual Clutch Transmissions
- - Multiclutch Automatic Transmissions
+ - Multi-Clutch Automatic Transmissions
  - Traditional Automatic Transmissions
 
 ---
