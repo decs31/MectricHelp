@@ -60,6 +60,8 @@ title: "Nissan GR6 Operation"
 | **D (6/N)** | 6 << |       | X     |       |       | X   |
 | **D (6/N)** | >> N | X     |       |       |       | X   |
 
+---
+
 ## Axis Feed Pressure Solenoids
 ### Active Clutch Behaviour
 Maintains about 3.5 bar above the active clutch pressure target.
@@ -67,6 +69,8 @@ Maintains about 3.5 bar above the active clutch pressure target.
 ### Inactive Clutch Behaviour
 Holds 10 bar at most times.
 During a fork movement, it ramps up a few bar to star the fork moving, then drops to slow it down. Once the fork is in position it returns to 10 bar.
+
+---
 
 ## Lubricating Flow Solenoid
 Remains inactive by defualt, allowing fully lubrication and cooling flow.
