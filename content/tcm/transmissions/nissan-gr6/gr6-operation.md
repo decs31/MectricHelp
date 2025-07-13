@@ -34,7 +34,7 @@ title: "Nissan GR6 Operation"
 | 3    | C     | L        | 1.300 |
 | 4    | B     | H        | 3.800 |
 | 5    | C     | H        | 3.800 |
-| 6    | D     | L        | 3.800 |
+| 6    | D     | L        | 1.300 |
 > \* Fork A has two position sensors.
 
 --- 
