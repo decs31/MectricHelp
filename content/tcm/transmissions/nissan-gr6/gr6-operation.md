@@ -14,20 +14,6 @@ title: "Nissan GR6 Operation"
 | 6th  | 0.796  |
 | FD   | 3.700  |
 
---- 
-
-## Gear Mapping
-| Gear | Fork | Position | Volts |
-| ---- | ---- | -------- | ----- |
-| R    | A    | L        |       |
-| N    | -    | -        | -     |
-| 1    | A    | H        | 3.800 |
-| 2    | B    | L        | 1.300 |
-| 3    | C    | L        | 1.400 |
-| 4    | B    | H        | 3.740 |
-| 5    | C    | H        | 3.820 |
-| 6    | D    |          |       |
-
 ---
 
 ## Selector Forks
@@ -36,26 +22,52 @@ title: "Nissan GR6 Operation"
 | A    | 1        | R         |
 | B    | 2        | 4         |
 | C    | 3        | 5         |
-| D    | 6        | -         |
+| D    | N        | 6         |
 
-The high-level rule for selecting the direction of any fork:
+### Gear to Fork Mapping
+| Gear | Fork  | Position | Volts (Nominal) |
+| ---- | ----- | -------- | ----- |
+| R*   | A     | L        | 1.300 / 3.800 |
+| N    | *ALL* | *ALL*    | 2.500 |
+| 1*   | A     | H        | 3.800 / 1.300 |
+| 2    | B     | L        | 1.300 |
+| 3    | C     | L        | 1.300 |
+| 4    | B     | H        | 3.800 |
+| 5    | C     | H        | 3.800 |
+| 6    | D     | L        | 3.800 |
+> \* Fork A has two position sensors.
 
-**Upshift (low → high):**
- - E = On (apply feed)
- - Target fork’s shift-solenoid = On (bleed closed → high-side pressurized)
- - All other shift-solenoids = Off (their bleeds open → those circuits stay unpressurized)
+--- 
 
-**Downshift (high → low):**
- - E = On
- - Target fork’s shift-solenoid = Off (bleed open → low-side pressurized)
- - All other shift-solenoids = On (their bleeds closed → those circuits stay at equal pressure)
+## Shift Solenoids
+| Solenoid | Function         |
+| -------- | ---------------- |
+| 1        | 4 / N            |
+| 2        | 2 / 6            |
+| 3        | R / 5            |
+| 4        | 1 / 3            |
+| 5        | Sequence         |
 
-After the fork moves you drop E = Off to vent the feed gallery and let all spools return to neutral under spring/detent, leaving the dog-rings locked in their new positions.
+### Fork Solenoids Command Table
+| Fork        | Pos  | Sol 1 | Sol 2 | Sol 3 | Sol 4 | Seq |
+| ----------- | ---- |:-----:|:-----:|:-----:|:-----:|:---:|
+| **A (1/R)** | R << |       |       | X     |       |     |
+| **A (1/R)** | >> 1 |       |       |       | X     |     |
+| **B (2/4)** | 2 << |       | X     |       |       |     |
+| **B (2/4)** | >> 4 | X     |       |       |       |     |
+| **C (3/5)** | 3 << |       |       |       | X     | X   |
+| **C (3/5)** | >> 5 |       |       | X     |       | X   |
+| **D (6/N)** | 6 << |       | X     |       |       | X   |
+| **D (6/N)** | >> N | X     |       |       |       | X   |
 
-| Fork (gear-pair) |  Target | A (1–R) | B (2–4) | C (3–5) | D (6–N) | E (Seq) | What happens                                                                                          |
-| :--------------: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :---------------------------------------------------------------------------------------------------- |
-|      **1–R**     | Neutral |  **On** |    –    |    –    |    –    |    –    | Bleed closed → equal pressure → no move                                                               |
-|      **2–4**     |   2nd   |    –    | **Off** |    –    |    –    |    –    | Bleed open → differential when E pulses → moves to 2nd                                                |
-|      **3–5**     |   3rd   |    –    |    –    |  **On** |    –    |    –    | Bleed closed → equal pressure → no move (dogged by odd clutch)                                        |
-|      **6–N**     | Neutral |    –    |    –    |    –    |  **On** |    –    | Bleed closed → equal pressure → no move                                                               |
-|   **All forks**  |    –    |    –    |    –    |    –    |    –    |  **On** | Feed applied to all galleries, but only the B-circuit (bleed-open) sees differential → only 2–4 moves |
+## Axis Feed Pressure Solenoids
+### Active Clutch Behaviour
+Maintains about 3.5 bar above the active clutch pressure target.
+
+### Inactive Clutch Behaviour
+Holds 10 bar at most times.
+During a fork movement, it ramps up a few bar to star the fork moving, then drops to slow it down. Once the fork is in position it returns to 10 bar.
+
+## Lubricating Flow Solenoid
+Remains inactive by defualt, allowing fully lubrication and cooling flow.
+During a shift or high torque demand it will close off, to reduce pressure drop and allow maximum line pressure availability.
