@@ -204,7 +204,9 @@ This is the actual amount of torque the engine can produce, EXCLUDING any reduct
 
 ``Torque MUST be represented with a reasonable degree of accuracy for proper transmission operation.``
 
-If the ECU cannot calculate this value, then you MUST generate it by some other means such as: Math Expression, Table, or combination of the two.
+If the ECU cannot calculate this value, then you MUST generate it by some other means such as: MVIC Torque Model, Table, or Math Expression.
+
+{{% badge style="info" %}}MVIC Firmware v1.2.0+ has a mathematical torque model function{{% /badge %}}
 
 **Typical Input Values:** -100 to 800 Nm
 
@@ -372,4 +374,4 @@ The torque values given to the transmission will greatly affect the way the car 
 You can see that under normal conditions, uncorrected (yellow) and actual (green) engine torque should follow each other closely. In fact, it’s ok for these values to be identical. 
 When a torque reduction request is made, the actual engine torque must drop by at least that amount, while the uncorrected torque remains unchanged.
 
-{{% badge style="warning" %}} Failure to abide by these torque reduction requests may result in transmission damage!{{% /badge %}}
+{{% badge style="warning" %}}Failure to abide by these torque reduction requests may result in transmission damage!{{% /badge %}}
