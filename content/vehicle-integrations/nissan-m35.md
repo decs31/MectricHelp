@@ -40,7 +40,7 @@ This integration package is intended for use with Mectric Motorsport Electronics
  - Always test the system in a controlled environment before regular use.
  - Consult a qualified automotive technician if you are unsure of the installation or configuration process.
 
-{{% badge style="warning" title=" " %}} By using this software, you acknowledge that you have read, understood, and agreed to this disclaimer. {{% /badge %}}
+{{% notice style="warning" title="Acknowledgement" %}} By using this software, you acknowledge that you have read, understood, and agreed to this disclaimer. {{% /notice %}}
 > 
 
 ---
@@ -198,7 +198,7 @@ The following channels are transmitted by the MVIC to mimic the OEM ECU. In most
 
 
 ### Engine Torque (Uncorrected)
-{{% badge style="important" title="Critical" %}} {{% /badge %}}
+{{% badge style="important" title=" " %}}Critical{{% /badge %}}
 
 This is the actual amount of torque the engine can produce, EXCLUDING any reductions or interventions such as retards or cuts.
 
@@ -206,7 +206,7 @@ This is the actual amount of torque the engine can produce, EXCLUDING any reduct
 
 If the ECU cannot calculate this value, then you MUST generate it by some other means such as: MVIC Torque Model, Table, or Math Expression.
 
-{{% badge style="info" %}}MVIC Firmware v1.2.0+ has a mathematical torque model function{{% /badge %}}
+{{% notice style="info" %}}MVIC Firmware v1.2.0+ has a mathematical torque model function{{% /notice %}}
 
 **Typical Input Values:** -100 to 800 Nm
 
@@ -221,7 +221,7 @@ A stock engine would report 300 - 400 Nm at full load.
 
 
 ### Engine Torque (Actual)
-{{% badge style="important" title="Critical" %}} {{% /badge %}}
+{{% badge style="important" title=" " %}}Critical{{% /badge %}}
 
 This is the actual amount of torque the engine is producing, INCLUDING any reductions or interventions such as retards or cuts. 
 
@@ -374,4 +374,4 @@ The torque values given to the transmission will greatly affect the way the car 
 You can see that under normal conditions, uncorrected (yellow) and actual (green) engine torque should follow each other closely. In fact, it’s ok for these values to be identical. 
 When a torque reduction request is made, the actual engine torque must drop by at least that amount, while the uncorrected torque remains unchanged.
 
-{{% badge style="warning" %}}Failure to abide by these torque reduction requests may result in transmission damage!{{% /badge %}}
+{{% notice style="warning" %}}Failure to abide by these torque reduction requests may result in transmission damage!{{% /notice %}}

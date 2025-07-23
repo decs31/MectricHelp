@@ -129,7 +129,7 @@ Rx frames are accepted from base address offset 16 through 31 (432-447 by defaul
 The base address can be changed by the user, but it must be a multiple of 32 (0x20).
 
 
-{{% badge style="caution" %}}When more than one μPDM4 are on the same bus, their base address’s must be set independently and in multiples of at 32 (0x20).{{% /badge %}}
+{{% notice style="caution" %}}When more than one μPDM4 are on the same bus, their base address’s must be set independently and in multiples of at 32 (0x20).{{% /notice %}}
 
 Disconnect other devices which may be trying to use the same ID’s while you configure each device.
 
@@ -687,9 +687,9 @@ Each output driver is rated to capable of 15A continuous load, more in short bur
 ### PWM
 Each output can be PWM’d at up to 200Hz, allowing current/speed control of load devices such as globes, pumps, and fans. 
 
-{{% badge style="warning" %}}
+{{% notice style="warning" %}}
 **Care must be taken when PWM controlling highly inductive loads and external flywheel diodes must be fitted.** See the section on [DC Motors](#dc-motors-fans-pumps-etc) for details.
-{{% /badge %}}
+{{% /notice %}}
 
 **Rev 2 Hardware:** Frequencies are shared between OUT3 & OUT4.
 
