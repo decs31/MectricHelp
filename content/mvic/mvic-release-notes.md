@@ -3,6 +3,14 @@ title: "MVIC Release Notes"
 weight: 1
 ---
 
+## MVIC v1.2.1
+*24/07/2025*
+
+**Bug Fixes**
+ - Emtron Rx Preset - Forced Engine Torque to receive on Rx Data Set 3 only.
+
+---
+
 ## MVIC v1.2.0
 *21/06/2025*
 
