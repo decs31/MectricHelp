@@ -3,6 +3,14 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
+## MectriCal v0.19
+*24/07/2025*
+
+**Device Firmware**
+ - [MVIC v.1.2.1](../mvic/mvic-release-notes.md/#mvic-121) `NEW!`
+
+---
+
 ## MectriCal v0.18
 *21/06/2025*
 
