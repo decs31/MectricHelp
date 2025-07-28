@@ -113,7 +113,7 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 | B30	  | Solenoid 1-4 Supply Output |
 | B31	  | Solenoid 5-8 Supply Output |
 | B32	  | Solenoid 9-12 Supply Output |
-| B33	  | Solenoid 3-16 Supply Output |
+| B33	  | Solenoid 13-16 Supply Output |
 | B34	  | GND |
 
 ### Connector C
