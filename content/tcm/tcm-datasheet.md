@@ -161,6 +161,7 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
  - 2x Auxiliary output driver supplies
  - 2x Solenoid supplies
  - 1x Ignition switch input
+ - 24V Compatible
 
 ### Processor
  - Duel 650 MHz, 32bit Automotive Processors
@@ -173,7 +174,6 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
  - 12 bit, 1.22mV resolution
  - Switchable 1K pullups to 5V Out 1 on pins 1-8
  - Switchable 1K pullups to 5V Out 2 on pins 9-16
- - ~10K samples per second
  - 100K Ohms to ground
  - 24V tollerant
 
@@ -190,8 +190,15 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
  - Programmable 0-5V high trigger threshold
 
 **Digital Input 9-16:**
- - Fixed low trigger threshold: 0.42V
- - Fixed high trigger threshold: 2.40V
+ - Fixed low trigger threshold: 0.5V
+ - Fixed high trigger threshold: 2.4V
+
+### Hall Sensor Inputs
+> 4x 2-Wire Hall Effect Sensor Inputs
+ - 0.5 – 20KHz
+ - Open circuit detection
+ - Short to Battery detection
+ - Short to Ground detection
 
 
 ### Auxiliary Outputs
