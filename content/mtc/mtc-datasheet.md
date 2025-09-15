@@ -1,9 +1,9 @@
 ---
-title: "Praetor TC24 Datasheet"
+title: "MTC24 Datasheet"
 weight: 2
 ---
 
-The Mectric Praetor TC24 is a fully programmable Transmission Control Module aimed at controlling the most complex driveline and transmission components. Designed with an over abundant amount of processing power to allow for the implementation of extremely complex, no compromise control strategies.
+The Mectric MTC24 is a fully programmable Transmission Control Module aimed at controlling the most complex transmission and driveline components. Designed with an over abundant amount of processing power to allow for the implementation of extremely complex, no compromise control strategies.
 
 ## Overview
  - 2x 650 MHz Automotive Processors
@@ -33,7 +33,7 @@ The Mectric Praetor TC24 is a fully programmable Transmission Control Module aim
 ---
 
 ## Wiring Pinout
-![Praetor TC24 Pinout](/assets/tcm/tcm_pinout.png)
+![MC24 Pinout](/assets/tcm/tcm_pinout.png)
 > Looking into TCM
 
 ### Connector A
