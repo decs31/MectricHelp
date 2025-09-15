@@ -73,5 +73,5 @@ During a fork movement, it ramps up a few bar to star the fork moving, then drop
 ---
 
 ## Lubricating Flow Solenoid
-Remains inactive by defualt, allowing fully lubrication and cooling flow.
+Remains inactive by default, allowing fully lubrication and cooling flow.
 During a shift or high torque demand it will close off, to reduce pressure drop and allow maximum line pressure availability.
