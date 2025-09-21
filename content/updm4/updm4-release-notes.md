@@ -3,6 +3,14 @@ title: "uPDM4 Release Notes"
 weight: 1
 ---
 
+## uPDM4 v2.1.0
+*18/09/2025*
+
+**New Features**
+ - Added duty cycle measurement to input pins.
+
+---
+
 ## uPDM4 v2.0.5
 *02/06/2025*
 
