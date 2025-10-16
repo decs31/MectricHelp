@@ -1,9 +1,9 @@
 ---
-title: "MTC24 Datasheet"
+title: "MTC16 Datasheet"
 weight: 2
 ---
 
-The Mectric MTC24 is a fully programmable Transmission Control Module aimed at controlling the most complex transmission and driveline components. Designed with an over abundant amount of processing power to allow for the implementation of extremely complex, no compromise control strategies.
+The Mectric MTC16 is a fully programmable Transmission Control Module aimed at controlling the most complex transmission and driveline components. Designed with an over abundant amount of processing power to allow for the implementation of extremely complex, no compromise control strategies.
 
 ## Overview
  - 2x 650 MHz Automotive Processors
@@ -11,8 +11,8 @@ The Mectric MTC24 is a fully programmable Transmission Control Module aimed at c
  - 512 MB DDR3 RAM
  - 8 GB Data Logging Memory
  - Built-In PDM-Like power supplies
- - 8x Half-Bridge Auxiliary Outputs
  - 16x Low Side Proportional Current Solenoid Outputs
+ - 8x Half-Bridge Auxiliary Outputs
  - 4x Analogue Outputs
  - 16x Analogue Inputs
  - 16x Digital Inputs
@@ -33,7 +33,7 @@ The Mectric MTC24 is a fully programmable Transmission Control Module aimed at c
 ---
 
 ## Wiring Pinout
-![MC24 Pinout](/assets/tcm/tcm_pinout.png)
+![MTC16 Pinout](/assets/mtc/mtc16_pinout.png)
 > Looking into TCM
 
 ### Connector A
@@ -165,8 +165,35 @@ The Mectric MTC24 is a fully programmable Transmission Control Module aimed at c
 
 ### Processor
  - Duel 650 MHz, 32bit Automotive Processors
+ - Xilinx 7 Series FPGA
  - 512MB DDR3 RAM
- - Tightly coupled FPGA
+
+### Solenoid Outputs
+> 16x Proportional Current Solenoid Drivers
+ - 0.1 – 20 KHz PWM
+ - Low side only
+ - 1.8A continuous
+ - Current monitoring and control on all pins
+ - Flywheel diodes connected to solenoid power supply outputs (see below)
+ - Unused solenoid outputs can be used as low side auxiliary outputs
+
+### Solenoid Power Supply Outputs x4
+> 4x Protected Solenoid Supply Outputs
+ - Protected and monitored solenoid supply pins
+ - Over current protected
+ - Current & voltage diagnostic monitoring
+
+### Auxiliary Outputs
+> 8x Auxiliary Outputs 
+ - Half-Bridge Drivers
+ - 0.1 – 20 KHz PWM
+ - High Side / Low Side 35A peak, 8A continuous
+ - Bi-directional current monitoring on all pins
+
+### Analog Outputs
+> 4x Analog Outputs
+ - 0-5V, 10 bit, 4.88 mV resolution
+ - 11 mA per channel
 
 ### Analog Inputs
 > 16x Analog Inputs
@@ -175,7 +202,6 @@ The Mectric MTC24 is a fully programmable Transmission Control Module aimed at c
  - Switchable 1K pullups to 5V Out 1 on pins 1-8
  - Switchable 1K pullups to 5V Out 2 on pins 9-16
  - 100K Ohms to ground
- - 24V tollerant
 
 ### Digital Inputs
 > 16x Digital Inputs
@@ -200,34 +226,6 @@ The Mectric MTC24 is a fully programmable Transmission Control Module aimed at c
  - Short to Battery detection
  - Short to Ground detection
 
-
-### Auxiliary Outputs
-> 8x Auxiliary Outputs 
- - Half-Bridge Drivers
- - 0.1 – 20 KHz PWM
- - High Side / Low Side 35A peak, 15A continuous
- - Bi-directional current monitoring on all pins
-
-### Solenoid Outputs
-> 16x Proportional Current Solenoid Drivers
- - 0.1 – 20 KHz PWM
- - Low side only
- - 1.8A continuous
- - Current monitoring and control on all pins
- - Flywheel diodes connected to solenoid power supply outputs (see below)
- - Unused solenoid outputs can be used as low side auxiliary outputs
-
-### Solenoid Power Supply Outputs x4
-> 4x Protected Solenoid Supply Outputs
- - Protected and monitored solenoid supply pins
- - Over current protected
- - Current & voltage diagnostic monitoring
-
-### Analog Outputs
-> 4x Analog Outputs
- - 0-5V, 10 bit, 4.88 mV resolution
- - 11 mA per channel
-
 ### Inertial Measurement Unit
  - 3 Axis Accelerometer, ±2/4/8/16 g
  - 3 Axis Gyroscope, ±125 - ±4000 dps
@@ -238,7 +236,7 @@ The Mectric MTC24 is a fully programmable Transmission Control Module aimed at c
 
 ### Communications
  - 10/100 Ethernet PC tuning interface, high speed, high noise immunity
- - 2x CAN 2.0A/B Interfaces, fully user configurable
+ - 2x CAN 2.0A/B Interfaces, fully user configurable, selectable termination.
  - 1x RS232 Serial Interface
 
 ### Data Logging
