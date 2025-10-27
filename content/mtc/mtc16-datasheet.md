@@ -3,16 +3,19 @@ title: "MTC16 Datasheet"
 weight: 2
 ---
 
+![Mectric MTC16](/assets/mtc/mtc16_1.png)
+
 The Mectric MTC16 is a fully programmable Transmission Control Module aimed at controlling the most complex transmission and driveline components. Designed with an over abundant amount of processing power to allow for the implementation of extremely complex, no compromise control strategies.
 
 ## Overview
- - 2x 650 MHz Automotive Processors
- - Tightly Coupled FPGA
+ - 2x 650 MHz 32bit Automotive Processors
+ - Xilinx 7 Series FPGA
  - 512 MB DDR3 RAM
  - 8 GB Data Logging Memory
- - Built-In PDM-Like power supplies
+ - Fully protected power supply inputs
  - 16x Low Side Proportional Current Solenoid Outputs
  - 8x Half-Bridge Auxiliary Outputs
+ - 4x Protected Solenoid Power Supply Outputs
  - 4x Analogue Outputs
  - 16x Analogue Inputs
  - 16x Digital Inputs
@@ -49,7 +52,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 | A6	  | ANV 6  |
 | A7	  | ANV 7  |
 | A8	  | ANV 8  |
-| A9	  | Sensor GND |
+| A9	  | Sensor 0V Ref |
 | A10	  | ANV 9  |
 | A11	  | ANV 10  |
 | A12	  | ANV 11  |
@@ -74,7 +77,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 | A31	  | DI 14 |
 | A32	  | DI 15 |
 | A33	  | DI 16 |
-| A34	  | Sensor GND |
+| A34	  | Sensor 0V Ref |
 
 ### Connector B
 {{% badge style="info" %}}**Mating Connector**: 4-1437290-1{{% /badge %}}
@@ -139,7 +142,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 | C16	  | 5V0 Ref Output 1  |
 | C17	  | 5V0 Ref Output 2  |
 | C18	  | 8V0 Ref Output  |
-| C19	  | Sensor GND  |
+| C19	  | Sensor 0V Ref  |
 | C20	  | Ethernet Rx+  |
 | C21	  | Ethernet Rx-  |
 | C22	  | Ethernet Tx+  |
@@ -209,15 +212,16 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
  - 0-39V Analog Input on all pins
  - 12 bit, 9.52mV resolution
  - Hall effect & Reluctor sensor compatible
- - Switchable 4K7 pullups to 8.0V on all pins
+ - Switchable 4K7 pullup to 8.0V on all pins
+ - Switchable 330R pulldown to GND on pins 1-8
 
 **Digital Input 1-8:**
- - Programmable 0-5V low trigger threshold
  - Programmable 0-5V high trigger threshold
+ - Programmable 0-5V low trigger threshold
 
 **Digital Input 9-16:**
- - Fixed low trigger threshold: 0.5V
  - Fixed high trigger threshold: 2.4V
+ - Fixed low trigger threshold: 0.5V
 
 ### Hall Sensor Inputs
 > 4x 2-Wire Hall Effect Sensor Inputs
