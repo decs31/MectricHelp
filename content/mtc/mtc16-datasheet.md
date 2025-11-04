@@ -31,7 +31,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 ## Applications
  - Dual Clutch Transmissions
  - Multi-Clutch Automatic Transmissions
- - Traditional Automatic Transmissions
+ - Conventional Automatic Transmissions
 
 ---
 
