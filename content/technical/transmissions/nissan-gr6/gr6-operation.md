@@ -19,7 +19,7 @@ title: "Nissan GR6 Operation"
 ## Selector Forks
 | Fork | Gear Low | Gear High |
 | ---- | -------- | --------- |
-| A    | 1        | R         |
+| A    | R        | 1         |
 | B    | 2        | 4         |
 | C    | 3        | 5         |
 | D    | N        | 6         |

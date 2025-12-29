@@ -40,7 +40,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 > Looking into TCM
 
 ### Connector A
-{{% badge style="info" %}}**Mating Connector**: 4-1437290-0{{% /badge %}}
+{{% badge style="info" %}}**Mating Connector**: 2389578-1{{% /badge %}}
 
 | Pin     | Function    |
 | ------- | ----------- |
@@ -80,7 +80,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 | A34	  | Sensor 0V Ref |
 
 ### Connector B
-{{% badge style="info" %}}**Mating Connector**: 4-1437290-1{{% /badge %}}
+{{% badge style="info" %}}**Mating Connector**: 2389578-2{{% /badge %}}
 
 | Pin     | Function    |
 | ------- | ----------- |
@@ -157,6 +157,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 
 ### Power Supply
  - Reverse polarity protection
+ - Overvoltage protection - Clamped to 35V
  - Over temperature protection
  - Over current protection
  - Current & voltage diagnostic monitoring
