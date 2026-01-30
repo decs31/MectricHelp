@@ -1,6 +1,6 @@
 ---
 title: "MTC16 Datasheet"
-weight: 2
+weight: 3
 ---
 
 ![Mectric MTC16](/assets/mtc/mtc16_1.png)
@@ -125,10 +125,10 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 | Pin     | Function    |
 | ------- | ----------- |
 | C1	  | Battery Hot Supply  |
-| C2	  | Aux 1-4 Supply  |
-| C3	  | Aux 5-8 Supply  |
-| C4	  | Solenoid 1-8 Supply  |
-| C5	  | Solenoid 9-16 Supply  |
+| C2	  | Aux Supply  |
+| C3	  | Aux Supply  |
+| C4	  | Solenoid Supply  |
+| C5	  | Solenoid Supply  |
 | C6	  | Ignition Switch  |
 | C7	  | GND  |
 | C8	  | CAN 1 Hi  |

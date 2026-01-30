@@ -1,5 +1,5 @@
 ---
 title: "MTC Release Notes"
-weight: 1
+weight: 2
 ---
 

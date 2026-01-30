@@ -1,6 +1,5 @@
 ---
 title: "Ethernet Wiring"
-weight: 3
 ---
 
 The MTC16 uses 10/100Base-T Ethernet communications. It only requires 4 wires (2 pairs) to operate.
