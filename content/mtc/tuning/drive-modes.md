@@ -18,8 +18,8 @@ Drive mode input sources have fixed priorities. This allows them to be used in c
 | ----------- | ------------------------------------------- |
 | 1 (Highest) | Park Request Switch                         |  
 | 2           | Neutral Request Switch                      |
-| 3           | Reverse Reqest Switch                       |
-| 4           | Shifter Position (Park / Reverse / Neutral) |
+| 3           | Shifter Position (Park / Reverse / Neutral) |
+| 4           | Reverse Request Switch                      |
 | 5           | Manual Switch                               |
 | 6           | Sport Switch                                |
 | 7           | Drive Switch                                |

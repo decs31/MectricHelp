@@ -176,21 +176,27 @@ The condition before the `?` is evaluated. If true, the expression on the LHS of
 
 ### Switch Statements
 Switch statements allow a single integer value to direct the program flow. 
-Switch statements are fast as they do not have to check each condition, they simple jump program execution to the matching position. The trade-off is that they can increase the size of the compiled script.
+Switch statements are fast as they do not have to check each condition, they simply jump program execution to the matching position. The trade-off is that they can increase the size of the compiled script.
 
 ``` c++
 switch (a) {
     case 0:
-        // Do something when a == 0.
+        // Do something when 'a' == 0.
         break;
     case 1: 
-        // Do something when a == 1.
+        // Do something when 'a' == 1.
         break;
     case 10:
-        // Do something when a == 10.
+        // Do something when 'a' == 10.
+        break;
+    case 11:
+        // Do something when 'a' == 11.
+        // Fallthrough: Without a break statement the next case will be run too.
+    case 12:
+        // Do something when 'a' == 11 OR 'a' == 12.
         break;
     default:
-        // Do this when a is not any of the above values.
+        // Do this when 'a' is not any of the above values.
         break;
 }
 ``` 
@@ -199,5 +205,71 @@ switch (a) {
 ## Loops
 
 ### While
+A while loop will continue to repeat as long as the conditional expression evaluates true.
+
+**Syntax:** while(condition) { body }
+
+
+``` c++
+// This loop will exit when a <= 0
+int a = 10;
+while (a > 0) {
+    // Do something...
+    a--;
+}
+
+// This loop will never exit
+while(true) {
+    // Do something...
+}
+
+// This loop will never run
+while (false) {
+    // Unreachable code.
+}
+``` 
 
 ### For
+
+A for loop has 3 input expressions:
+1. **Pre-loop Initializer:** Runs once as the loop is entered.
+2. **Condition:** Runs every loop, if true the loop is entered, if false the loop is exited.
+3. **Post-loop Expression:** After every iteration this expression is run.
+
+Any or all 3 expressions can be omitted (left blank).
+
+**Syntax:** for(initializer expression, condition, post loop expression) { body }
+
+``` c++
+// Run the loop 10 times with values of i from 0 to 9.
+for (int i = 0; i < 10; i++) {
+    print(i);
+}
+
+// This is also valid
+int i = 10;
+for ( ; i > 0; ) {
+    i -= 3;
+}
+
+// Infinite loop that never exits
+for (;;) print("You're stuck here forever!");
+```
+
+### Break statements
+Loops can be exited at any time with a break statement
+
+``` c++
+while(1) {
+    print("This happens forever until x is greater than 100...");
+    if (x > 100) break;
+}
+
+for (int i = 0; i < 10; i++) {
+    if (i + 1 > 3) {
+        print("Early exit!");
+        break;
+    }
+    print(i);
+}
+```

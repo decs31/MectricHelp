@@ -1,6 +1,8 @@
 ---
 title: "MTC16 Datasheet"
 weight: 3
+params:
+    menuPre: '<i class="fa-regular fa-file-lines"></i> '
 ---
 
 ![Mectric MTC16](/assets/mtc/mtc16_1.png)

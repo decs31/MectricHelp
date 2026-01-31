@@ -76,7 +76,8 @@ We have found that potting the modified mechatronics units with compounds such a
 
 ![8HP Connector Pinout](/assets/8hp/8hp-pinout.png)
 
-{{% badge style="important" %}}Pinout assumes mechatronic modifications have been completed.{{% /badge %}}
+>[!IMPORTANT]
+>Pinout assumes mechatronic modifications have been completed as detailed above.
 
 | Pin | Function                        | TCM Pin **1*             |
 | --- | ------------------------------- | ------------------------ |
@@ -99,17 +100,20 @@ We have found that potting the modified mechatronics units with compounds such a
 | 16 *(Gen 1)* | Clutch D Solenoid      | Sol 7 (B16) **3*         |
 | 16 *(Gen 2)* | Brake B Solenoid       | Sol 7 (B16) **3*         |
 
-> **1.** This pinout matches the supplied 8HP base calibration. You're free to alter the pin assignments as long as the change is reflected in the config.
+> **1.** This pinout matches the supplied 8HP base calibration. You're free to alter the TCM pin assignments as long as the change is reflected in the config.
 
 > **2.** Ideally each 4 solenoids would have a separate supply bank, but this isn't possible using the OEM connector. Connecting to two bridged solenoid supplies will suffice.
 
-> **3.** To cater for Gen 1 vs Gen 2, swap the Brake B / Clutch D solenoid assignment in config OR swap pins 15 / 16. 
+> **3.** To cater for Gen 1 vs Gen 2, swap the Brake B / Clutch D solenoid assignment in config OR swap pins 15 / 16 in the wiring harness. 
 
 ---
 
 ## Speed Sensors
 
-The 8HP has input and output shaft speed sensors. The sensors are 2-wire hall effect type, however the polarity of the internal wiring means the dedicated hall sensor inputs on the TCM cannot be used. Instead, the sensors can be wired to Digital Inputs 1 to 8. **The internal 330R pulldown must to be enabled**.
+ - Input Shaft Speed
+ - Output Shaft Speed
+
+The sensors are 2-wire hall effect type, however the polarity of the internal wiring means the dedicated hall sensor inputs on the TCM cannot be used. Instead, the sensors can be wired to Digital Inputs 1 to 8. **The internal 330R pulldown must to be enabled**.
 
 In this arrangement, the signal voltage will sit at around 2V when stationary, and pulse up to around 4V when a tooth passes the sensor.
 
@@ -171,6 +175,6 @@ Mechanical. Clips onto and holds the park-release piston in its disengaged posit
 ---
 
 ## Pressure Control
-The 8HP does not have any pressure sensors. This means that all internal pressures are inferred from solenoid current. As the MTC16 uses pressure targets it's important to get the solenoid pressure translations as accurate as possible. The supplied 8HP base calibration includes pressure translation tables taken from OEM roms. In most cases these do not need to be changed.
+The 8HP does not have any pressure sensors. This means that all internal pressures are inferred from solenoid current. Because the TCM uses pressure targets it's important to get the solenoid pressure translations as accurate as possible. The supplied 8HP base calibration includes pressure translation tables taken from OEM roms. In most cases these do not need to be changed.
 
 > Optionally, you may enable Line Pressure and/or Clutch Pressure estimations to give feedback based on actual solenoid activity and fluid temperature.
