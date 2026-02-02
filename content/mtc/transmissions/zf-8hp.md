@@ -1,6 +1,5 @@
 ---
 title: "ZF 8HP"
-draft: true
 ---
 
 ## Models

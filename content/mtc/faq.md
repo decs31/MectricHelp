@@ -66,9 +66,9 @@ Table axes can be set to any one of over 1500 channels allowing a virtually limi
 ## Output Duty Cycle vs Amperage
 The majority of transmission related output functions generate a target current setpoint in amps, rather than a fixed PWM duty cycle.
 
-When a solenoid is commanded draw a certain current, it's physical position is extremely consistent, resulting in a stable and repeatable position regardless of system voltage and temperature variables. If a fixed duty cycle were used, the transmission may work well one day, and poorly the next.
+When a solenoid is commanded to draw a certain current, it's physical position is extremely consistent, resulting in a stable and repeatable position regardless of system voltage and temperature variables. If a fixed duty cycle were used, the transmission may work well one moment, and poorly the next.
 
-Every output pin can be used in current control mode, including auxiliary outputs.
+Every TCM output pin can be used in current control mode, including auxiliary outputs.
 
 User Functions can configured to output either a traditional PWM waveform, or a current setpoint.
 
