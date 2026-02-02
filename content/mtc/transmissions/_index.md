@@ -1,6 +1,5 @@
 ---
 title: "Transmissions"
-draft: true
 weight: 1000
 ---
 

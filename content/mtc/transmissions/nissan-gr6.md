@@ -1,5 +1,6 @@
 ---
 title: "Nissan GR6"
+draft: true
 ---
 
 {{% children sort="title" %}}
