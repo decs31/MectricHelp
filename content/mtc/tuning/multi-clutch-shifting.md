@@ -12,6 +12,10 @@ Shifting on multi-clutch transmissions happens over 4 phase:
 ![Shift Pressure Phases](</assets/mtc/shift_pressure_phases.png>)
 > A simplified representation of the clutch pressures during the 4 shift phases.
 
+The TCM will calculate all required clutch pressures based on supplied and available engine torque. As long as the clutch geometry is configured reasonably and the torque data from the engine is accurate, there's very little tuning required.
+
+>[!WARNING] It is absolutely critical that the engine torque data is accurate.
+
 ---
 
 ## Fill Phase
@@ -77,7 +81,7 @@ Stable Fill Pressure = 1.3 + -0.1 = 1.2 Bar.
 ---
 
 ## Torque Transfer Phase
-
+The Torque transfer phase begins the process of transferring supplied engine torque over to the oncoming clutch. In most cases, the oncoming clutch will still be fully slipping by the end of the phase, but it will be holding most of if not all the torque.
 
 
 ---
