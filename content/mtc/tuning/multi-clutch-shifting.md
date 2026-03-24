@@ -3,6 +3,90 @@ title: "Multi-Clutch Shifting"
 draft: true
 ---
 
+Shifting on multi-clutch transmissions happens over 4 phase:
+ 1. Fill
+ 2. Torque Transfer
+ 3. Inertial Sync
+ 4. Lock
+
+![Shift Pressure Phases](</assets/mtc/shift_pressure_phases.png>)
+> A simplified representation of the clutch pressures during the 4 shift phases.
+
+---
+
+## Fill Phase
+Any clutch that is disengaged will have it's pressure fully bled off. The job of the fill phase is simply to ensure that the oncoming clutch pressure chamber is filled with fluid so that it can operate as fast as possible once the shift actually starts.
+
+Generally, the clutch pressure at the end of the Fill phase will be the clutch's touch point pressure. The Fill phase is not intended to apply any meaningful clutch pressure.
+
+>[!INFO] Unlike the rest of the shift phases, the fill phase doesn't use torque, it is purely pressure based.
+
+The Fill phase is broken into 3 sub phases:
+ 1. Pre-Fill
+ 2. Fast Fill
+ 3. Stable Fill
+
+The amount of time spent in each phase is limited by the `Total Fill Time` table and the phase order.
+```
+Stable Fill time = Total Fill Time - (Pre-fill + Fast Fill)
+```
+**Example:**
+ - Pre-fill = 20ms
+ - Fast fill = 40ms
+ - Total fill time = 100ms
+
+Stable fill = 100 - (20 + 40) = 40ms
+
+Setting a fill phase time to zero will result in that phase being skipped. It's perfectly valid in many cases to skip the Pre-fill or the Fast Fill phase.
+It's also common for high torque, high speed shifts to consist of only the Fast-Fill phase. In this case, the Pre-fill Time would be 0 and the Fast Fill Time would take up the entire Total Fill Time. 
+
+> [!INFO] Regardless of the Pre-fill and Fast Fill times, the Fill phase will always exit once the Total Fill Time has elapsed.
+
+
+### Pre-Fill
+The Pre-fill phase simply opens the clutch pressure solenoid at the very start of the shift. The specified pressure is absolute and disregards the touch point.
+
+Pre-fill pressure doesn't not usually exceed the touch point pressure.
+
+**Typical Pressure:** 0.5 - 1.5 Bar
+**Typical Time:** 0-100ms
+
+> Setting the `Pre-Fill Time` to 0 will skip the Pre-fill phase.
+
+### Fast Fill
+During Fast Fill, the clutch pressure solenoid is driven very high for a short period. The intention is to allow a fast in-rush of fluid to fill the clutch chamber as fast as possible.
+
+>[!CAUTION] A correctly configured combination of Fast Fill Pressure and Fast Fill Time should result in the actual pressure ramping up very quickly to, but never in excess of the touch point.
+
+**Typical Pressure:** 3.0 - 5.0 Bar
+**Typical Time:** 20-50ms
+
+### Stable Fill
+After the Pre-fill and Fast Fill phases are complete, any remaining Fill Time will be spent in the Stable Fill phase.
+
+The pressure specified during Stable Fill is an **offset** of the clutch's touch point pressure. 
+
+**Example:**
+ - Touch Point = 1.3 Bar.
+ - Stable Fill Pressure Offset = -0.1 Bar.
+
+Stable Fill Pressure = 1.3 + -0.1 = 1.2 Bar.
+
+**Typical Pressure Offset:** 0.0 Bar (Settle on the Touch Point)
+
+---
+
+## Torque Transfer Phase
+
+
+
+---
+
+## Inertial Sync Phase
+
+
+---
+
 ## Upshift Phases
 
 | Phase       | Time       | Oncoming Clutch | Offgoing Clutch |

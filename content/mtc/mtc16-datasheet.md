@@ -159,7 +159,7 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 
 ### Power Supply
  - Reverse polarity protection
- - Overvoltage protection - Clamped to 35V
+ - Over voltage protection - Clamped to 35V
  - Over temperature protection
  - Over current protection
  - Current & voltage diagnostic monitoring

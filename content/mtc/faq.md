@@ -1,5 +1,5 @@
 ---
-title: "FAQ"
+title: "MTC16 FAQ"
 weight: 1
 params:
   menuPre: '<i class="far fa-question-circle"></i> '
@@ -69,7 +69,7 @@ When a solenoid is commanded to draw a certain current, it's physical position i
 
 Every TCM output pin can be used in current control mode, including auxiliary outputs.
 
-User Functions can configured to output either a traditional PWM waveform, or a current setpoint.
+User Functions can be configured to output either a traditional PWM waveform, or a current setpoint.
 
 ## Unused Solenoid Output Pins
 Unused solenoid output pins can be used as auxiliary outputs for any purpose, including User Functions. 
