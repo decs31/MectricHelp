@@ -3,6 +3,22 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
+## MectriCal v0.38
+*07/05/2026*
+
+**New Features**
+ - Added support for MTC16 Transmission Controller.
+
+**Bug Fixes**
+ - Minor bug fixes to logging view.
+ - Fixed a memory leak effecting some specific GPUs.
+ - Minor performance improvements.
+
+**Device Firmware**
+ - [MTC v.0.24.0](../mtc/mtc-release-notes.md) `NEW!`
+
+---
+
 ## MectriCal v0.20
 *22/09/2025*
 

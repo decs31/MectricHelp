@@ -3,9 +3,8 @@ title: "Nissan GR6"
 draft: true
 ---
 
-{{% children sort="title" %}}
-
 ## Wiring
+Refer to the [Emtron TM16-R35 Adapter Kit Datasheet](https://docs.emtronaustralia.com.au/transmission-control/datasheets/tm16-r35-adapter).
 
 ---
 
@@ -47,13 +46,13 @@ draft: true
 --- 
 
 ## Shift Solenoids
-| Solenoid | Function         |
-| -------- | ---------------- |
-| 1        | 4 / N            |
-| 2        | 2 / 6            |
-| 3        | R / 5            |
-| 4        | 1 / 3            |
-| Sequence | Fork 3 & 4       |
+| Solenoid | Function          |
+| -------- | ----------------- |
+| 1        | 4 / N             |
+| 2        | 2 / 6             |
+| 3        | R / 5             |
+| 4        | 1 / 3             |
+| 5        | Fork 3 & 4 Select |
 
 ### Shift Solenoid Truth Table
 | Fork        | Gear | Sol 1 | Sol 2 | Sol 3 | Sol 4 | Seq |
@@ -70,12 +69,12 @@ draft: true
 ---
 
 ## Axis Feed Pressure Solenoids
-### Active Clutch Behavior
+### Active Axis/Clutch Behavior
 Maintains about 3.5 bar above the active clutch pressure target.
 
-### Inactive Clutch Behavior
+### Inactive Axis/Clutch Behavior
 Holds 10 bar at most times.
-During a fork movement, it ramps up a few bar to star the fork moving, then drops to slow it down. Once the fork is in position it returns to 10 bar.
+During fork movement, the inactive axis pressure is used to control the shift fork movement force and velocity. Once the fork is in position it returns to 10 bar.
 
 ---
 

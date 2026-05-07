@@ -16,6 +16,17 @@ The TCM will calculate all required clutch pressures based on supplied and avail
 
 >[!WARNING] It is absolutely critical that the engine torque data is accurate.
 
+## Line Pressure
+>[!IMPORTANT] DO NOT try to tune the shifting on a multi-clutch transmission by manipulating the Line Pressure.
+
+Line Pressure should be sufficient to supply all the pressure the clutches need during a shift, but the clutches should control their own pressures. 
+
+Clutch pressure can be considered a minimum value for the Line Pressure Target.
+
+Some transmissions will require the Line Pressure to be set very high for the duration of a shift, giving maximum flow control to the clutch solenoids. 
+
+> Depending on the transmission in question, setting the Line Pressure to "Downstream Pressure Offset" mode can simplify this process.
+
 ---
 
 ## Fill Phase
@@ -50,7 +61,7 @@ It's also common for high torque, high speed shifts to consist of only the Fast-
 ### Pre-Fill
 The Pre-fill phase simply opens the clutch pressure solenoid at the very start of the shift. The specified pressure is absolute and disregards the touch point.
 
-Pre-fill pressure doesn't not usually exceed the touch point pressure.
+Pre-fill pressure does not usually exceed the touch point pressure.
 
 **Typical Pressure:** 0.5 - 1.5 Bar
 **Typical Time:** 0-100ms
@@ -58,6 +69,8 @@ Pre-fill pressure doesn't not usually exceed the touch point pressure.
 > Setting the `Pre-Fill Time` to 0 will skip the Pre-fill phase.
 
 ### Fast Fill
+![alt text](/assets/mtc/fast_fill.png)
+
 During Fast Fill, the clutch pressure solenoid is driven very high for a short period. The intention is to allow a fast in-rush of fluid to fill the clutch chamber as fast as possible.
 
 >[!CAUTION] A correctly configured combination of Fast Fill Pressure and Fast Fill Time should result in the actual pressure ramping up very quickly to, but never in excess of the touch point.
@@ -83,21 +96,59 @@ Stable Fill Pressure = 1.3 + -0.1 = 1.2 Bar.
 ## Torque Transfer Phase
 The Torque transfer phase begins the process of transferring supplied engine torque over to the oncoming clutch. In most cases, the oncoming clutch will still be fully slipping by the end of the phase, but it will be holding most of if not all the torque.
 
+### Up Shift & Overrun Down Shift
+Torque is transferred to the oncoming clutch while the offgoing clutch is mostly released. By the end of the phase, the oncoming clutch will be carrying all the torque, but it will still be fully slipping at the offgoing gear speed.
+It's the Inertial Sync phase's job to reduce the slip to zero.
+
+### Driven Down Shift
+During a driven down shift, the offgoing clutch's torque capacity is reduced to deliberately introduce a controlled amount of slip that will bring the Input Shaft Speed up to the ongoing gear speed. 
+As the clutch slip approaches zero, the oncoming clutch is ramped in to catch the input load, while the offgoing clutch is tapered out. 
+
+By the end of the Transfer phase the oncoming clutch slip should be near zero. 
+
+![Driven Down Shift](/assets/mtc/driven_down_shift.png)
+> Driven Down Shift with ideal speed synchronization.
+
+### Down Shift Rev Match
+During a rev match, both the offgoing and oncoming clutch are reduced to zero torque capacity. They will both settle on their touch points, allowing the engine to freely rev.
+
+As the oncoming slip approaches zero, the oncoming clutch is ramped in to catch the input torque load.
 
 ---
 
 ## Inertial Sync Phase
+During this phase, clutch slip is reduced to near zero and the Input Shaft Speed is synced to the oncoming gear speed. Additional Torque capacity is applied to the oncoming clutch to achieve this.
 
+The engine's inertia and torque is considered when calculating how much torque to apply to control the slip.
+
+At high input torque, prolonged sync times will result in increased clutch heat and wear.
+
+>[!INFO] The main "Gear" runtime will change to the next gear at the start of the Inertial Sync phase.
+
+### Torque Reductions
+Any torque reduction that is enabled by the user is applied now to aid in syncing the Input Shaft Speed. Using torque reductions mean less clutch capacity is needed to achieve synchronization.
 
 ---
 
-## Upshift Phases
+## Lock Phase
+The Lock phase is used to eliminate any remaining clutch slip. A user definable amount of additional torque capacity is applied to the clutch during the lock phase. 
 
-| Phase       | Time       | Oncoming Clutch | Offgoing Clutch |
-| ----------- | ---------- | --------------- | --------------- |
-| Prefill     | 0-100 ms   | Filling to a low pressure under the touch point. | Full torque capacity | 
-| Fast fill   | 0-60 ms   | A high pressure is temporarily targeted to rapidly fill the clutch to it's touch point pressure. The pressure should not actually reach the high target, rather the increased solenoid opening speeds up the filling time. | Full torque capacity |
-| Stable fill | 20-60 ms   | Clutch pressure is stablised to it's touch point. | Full torque capacity |  
-| Transfer    | 50-200 ms  | Pressure is ramped up to torque transfer pressure over the desired time. At the end of the transfer phase, the oncoming clutch is holding the torque capacity, but is still fully slipping as the rest of the rotating components need to catch up.  | Bleeding off to touch point pressure |
-| Inertial        | 50-300 ms  | Torque limits are now requested. Pressure is ramped up until slip is zero. The pressure should ramp just enough to linearly reduce slip to zero over the course of the target slip time. | Slowly bleeding off under touch point pressure |
-| Hold        | 20-100 ms  | Ramping up to full torque capacity to ensure zero slip. Torque limits are lifted. | Fully bled off |   
+---
+
+## Shift Tuning
+The torque modelled approach to shifting dramatically reduces the tuning complexity of gear shifts for the end user, provided the input torque is accurate and the Clutch Configuration is accurate.
+
+The goal when tuning a shift is simply to achieve the slip target throughout the shift. If the slip is on target then the only thing left to do is dial in the feel by manipulating the shift target times.
+
+The runtimes to watch are `Oncoming Clutch Slip Target` and `Oncoming Clutch Slip`. Ideally they should lay over each other.
+
+If a shift feels harsh, check the slip curve. If the slip is on target, extend the shift times before looking for a way to alter the clutch pressure or clutch torque capacity.
+
+![Ideal Shift Slip Example](/assets/mtc/shift_slip_ideal.png)
+> Ideal clutch slip curve during an upshift.
+
+### Touch Points
+>[!IMPORTANT] It is critical that the Clutch Touch Points are setup at the outset. Poorly configured touch points will always lead to bad shifting and drivability.
+
+
+
