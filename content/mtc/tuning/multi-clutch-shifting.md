@@ -1,6 +1,5 @@
 ---
 title: "Multi-Clutch Shifting"
-draft: true
 ---
 
 Shifting on multi-clutch transmissions happens over 4 phase:
@@ -100,6 +99,9 @@ The Torque transfer phase begins the process of transferring supplied engine tor
 Torque is transferred to the oncoming clutch while the offgoing clutch is mostly released. By the end of the phase, the oncoming clutch will be carrying all the torque, but it will still be fully slipping at the offgoing gear speed.
 It's the Inertial Sync phase's job to reduce the slip to zero.
 
+![Up Shift Transfer Torque](/assets/mtc/transfer_torque.png)
+> Note the engine speed is still matching Clutch A (offgoing) at the end of the transfer phase.
+
 ### Driven Down Shift
 During a driven down shift, the offgoing clutch's torque capacity is reduced to deliberately introduce a controlled amount of slip that will bring the Input Shaft Speed up to the ongoing gear speed. 
 As the clutch slip approaches zero, the oncoming clutch is ramped in to catch the input load, while the offgoing clutch is tapered out. 
@@ -125,8 +127,16 @@ At high input torque, prolonged sync times will result in increased clutch heat 
 
 >[!INFO] The main "Gear" runtime will change to the next gear at the start of the Inertial Sync phase.
 
+![Inertial Phase Torque](/assets/mtc/inertial_torque.png)
+>The Engine Speed is now matching Clutch B (oncoming) at the end of the Inertial Sync phase.
+
 ### Torque Reductions
 Any torque reduction that is enabled by the user is applied now to aid in syncing the Input Shaft Speed. Using torque reductions mean less clutch capacity is needed to achieve synchronization.
+
+![Up Shift Torque Limit](/assets/mtc/up_shift_torque_limit.png)
+> Up shift torque limit gets applied at the start of the Inertial Sync phase and is removed as slip approaches zero.
+
+>[!TIP] If the engine continues to limit torque after the clutch is synced and locked, the shift will feel harsh.
 
 ---
 
