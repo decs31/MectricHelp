@@ -3,6 +3,14 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
+## MectriCal v0.39
+*17/05/2026*
+
+**Bug Fixes**
+ - Fixed Cal file opening on MVIC.
+
+---
+
 ## MectriCal v0.38
 *07/05/2026*
 
