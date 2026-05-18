@@ -1,5 +1,6 @@
 ---
 title: Error Codes
+draft: true
 ---
 
 | # | Code | Description |

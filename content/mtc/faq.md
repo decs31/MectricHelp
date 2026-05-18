@@ -1,6 +1,7 @@
 ---
 title: "MTC16 FAQ"
 weight: 1
+draft: true
 params:
   menuPre: '<i class="far fa-question-circle"></i> '
 ---
