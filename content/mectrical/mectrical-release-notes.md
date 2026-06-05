@@ -3,6 +3,14 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
+## MectriCal v0.41
+*06/06/2026*
+
+**Device Firmware**
+ - [MTC v.0.25.1](../mtc/mtc-release-notes.md) `NEW!`
+
+---
+
 ## MectriCal v0.39
 *17/05/2026*
 
