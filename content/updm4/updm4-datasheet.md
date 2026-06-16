@@ -222,7 +222,7 @@ These frames are continually transmitted to the CAN bus. They contain lots of da
 | Input 4 Frequency | 3 | 16 | No | 0.1 | 0 | Hz | 1 |  |
 
 ### Tx Frame 5: Device Totals Data 
-**Base ID Offset:** 4 (0x05) | **DLC:** 8 | **Rate:** 20 Hz
+**Base ID Offset:** 5 (0x05) | **DLC:** 8 | **Rate:** 20 Hz
 
 | **Data** | **Byte** | **Length (Bits)** | **Signed** | **Multiplier** | **Offset** | **Units** | **Decimals** | **Usage** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
