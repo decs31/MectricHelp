@@ -178,7 +178,9 @@ The Mectric MTC16 is a fully programmable Transmission Control Module aimed at c
 > 16x Proportional Current Solenoid Drivers
  - 0.1 – 20 KHz PWM
  - Low side only
- - 1.8A continuous
+ - 1.8A continuous current per pin
+ - 1.5A max current setpoint in single mode
+ - 2.7A max current setpoint in paired mode
  - Current monitoring and control on all pins
  - Flywheel diodes connected to solenoid power supply outputs (see below)
  - Unused solenoid outputs can be used as low side auxiliary outputs
