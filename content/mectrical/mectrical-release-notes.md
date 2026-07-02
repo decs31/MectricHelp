@@ -3,6 +3,20 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
+## MectriCal v0.47
+*03/07/2026*
+
+ - Added Clutch Geometry Tool.
+ - Added Emtron build manager.
+ - Added update available icon to device list on welcome screen.
+ - Fixed bug where device would sometimes disconnect while opening.
+ - Add Cal Module import/export. *Right click on a folder or item in the config tree to export it and it's children as a module. Import from the file menu.*
+
+**Device Firmware**
+ - [MTC v.0.29.1](../mtc/mtc-release-notes.md) `NEW!`
+
+---
+
 ## MectriCal v0.41
 *06/06/2026*
 
