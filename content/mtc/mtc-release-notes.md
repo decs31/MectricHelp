@@ -3,6 +3,31 @@ title: "MTC Release Notes"
 weight: 2
 ---
 
+## MTC v0.34.0
+*13/08/2026*
+
+ - Added Transbrake function.
+ - Added Launch Control function.
+ - Added shift fork movement retry logic.
+ - Added Takeup fast fill cooldown *(hard coded to 1.0 second)*.
+ - Added solenoid current dither.
+ - Improved solenoid fault detection and error codes.
+ - Added Clutch "Fast Fill During Transfer" option to Fill Phase setup for faster shifting. 
+ - Improved Takeup re-entry logic.
+ - Added Clutch Status runtime enumerations to track which sub system is controlling it's pressure.
+ - Clutch Active Pressure Target runtime now shows a pressure value when Clutch Pressure Control is in "Downstream Pressure Offset" mode. 
+ - Added Analog Output functions.
+ - Auxiliary Output current control can now work without a resistance value
+ - Fixed Neutral to Drive brake pressure showing ON/OFF enumeration instead of Bar.
+ - Added torque limit status runtime.
+ - Added Auto Shift lead time compensation.
+ - Auto Shift - Manual mode now has it's own Speed Reference selection (**MUST be set after update**).
+ - Added Wheel speeds, vehicle speed, and steering angle to R35 GTR CAN data.
+ - Fixed Clutch By Wire cooldown causing Takeup to be locked out the first time the car is put in gear.
+ - Fixed rare bug causing aux currents to show 25A when off.
+
+---
+
 ## MTC v0.29.1
 *03/07/2026*
 

@@ -3,6 +3,23 @@ title: "MectriCal Release Notes"
 weight: 1
 ---
 
+## MectriCal v0.50
+*13/08/2026*
+
+ - Added context sensitive undo/redo functionality.
+ - Added Detected Trouble Codes warning and code list window to status bar.
+ - Significant improvement to data log file opening speed.
+ - F1 key now context sensitive to active tuning tree location.
+ - Fixed User CAN Stream factor input rounding to whole numbers *(broken in 0.47)*.
+ - Updated ZF8HP base cal
+ - Updated Nissan GR6 base cal
+ - Added BMW/Getrag GS7 base cal
+
+**Device Firmware**
+ - [MTC v.0.34.0](../mtc/mtc-release-notes.md) `NEW!`
+
+---
+
 ## MectriCal v0.47
 *03/07/2026*
 
