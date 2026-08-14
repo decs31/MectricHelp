@@ -3,6 +3,23 @@ title: "MVIC Release Notes"
 weight: 1
 ---
 
+## MVIC v1.5.0
+*27/05/2026*
+
+**New Features**
+ - Improved USB comms stability
+
+---
+
+## MVIC v1.4.0
+*13/01/2026*
+
+**New Features**
+ - Updated CAN FD Support.
+ - Improved CPU load calculation.
+
+---
+
 ## MVIC v1.3.0
 *22/09/2025*
 

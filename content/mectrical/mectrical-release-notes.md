@@ -39,6 +39,7 @@ weight: 1
 
 **Device Firmware**
  - [MTC v.0.25.1](../mtc/mtc-release-notes.md) `NEW!`
+ - [MVIC v.1.5.0](../mvic/mvic-release-notes.md/#mvic-150) `NEW!`
 
 ---
 
@@ -63,6 +64,14 @@ weight: 1
 
 **Device Firmware**
  - [MTC v.0.24.0](../mtc/mtc-release-notes.md) `NEW!`
+
+---
+
+## MectriCal v0.23
+*13/01/2026*
+
+**Device Firmware**
+ - [MVIC v.1.4.0](../mvic/mvic-release-notes.md/#mvic-140) `NEW!`
 
 ---
 
