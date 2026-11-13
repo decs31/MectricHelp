@@ -1,5 +1,5 @@
 ---
-title: "MecScript"
+title: "EmC"
 draft: true
 weight: 5
 params:
